@@ -23,9 +23,13 @@
     python manage.py runserver
     ```
 ## Deployment
-1. Create webapp in Azure
-2. Add your existing Azure domain to ```ALLOWED HOSTS``` in ```.\hello\settings.py``` for example ```["djangopal.azurewebsites.net]```
-3. Go to your the webapp ```Deployment Center``` and connect webapp in Azure to GitHub repository
+1. If there is no ```requirements.txt``` in root directory generate one from virtual environment
+    ```
+    pip freeze > requirement.txt
+    ```
+2. Create webapp in Azure
+3. Add your existing Azure domain to ```ALLOWED HOSTS``` in ```.\hello\settings.py``` for example ```["djangopal.azurewebsites.net]```
+4. Go to your the webapp ```Deployment Center``` and connect webapp in Azure to GitHub repository
 
 ## Trivia
 To create more Django apps inside the project use:
