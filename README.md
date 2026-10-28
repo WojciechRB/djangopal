@@ -1,11 +1,10 @@
 # djangopal
 
-## Setup for local run
+## Running locally
 1. Make virtual environment
     ```sh
     python -m venv venv
     ```
-
 2. Activate virtual environment
     ```sh
     source venv/bin/activate # macOS/Linux
@@ -15,20 +14,22 @@
     ```sh
     pip install django
     ```
+4. Generate ```requirements.txt``` from virtual environment
+    ```
+    pip freeze > requirement.txt
+    ```
 4. Run app
     ```sh
     python manage.py runserver
     ```
+## Deployment
+1. Create webapp in Azure
+2. Add your existing Azure domain to ```ALLOWED HOSTS``` in ```.\hello\settings.py``` for example ```["djangopal.azurewebsites.net]```
+3. Go to your the webapp ```Deployment Center``` and connect webapp in Azure to GitHub repository
 
-## Step to before deployement
-1. Create file **requirements.txt** in root directory
-2. Copy and paste this:
-    ```txt
-    Django>=6.1.2
-    ```
-3. Add your Azure domain to ```ALLOWED HOSTS``` in ```.\hello\settings.py``` for example ```["djangopal.azurewebsites.net]```
-
-## How to create more Django apps inside the project
+## Trivia
+To create more Django apps inside the project use:
 ```sh
 django-admin startproject appname .
 ```
+where ```appname``` is your new app name.
