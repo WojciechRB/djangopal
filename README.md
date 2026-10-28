@@ -16,7 +16,7 @@
     ```
 4. Generate ```requirements.txt``` from virtual environment
     ```
-    pip freeze > requirement.txt
+    pip freeze > requirements.txt
     ```
 5. Run app
     ```sh
@@ -25,7 +25,7 @@
 ## Deployment
 1. If there is no ```requirements.txt``` in root directory generate one from virtual environment
     ```
-    pip freeze > requirement.txt
+    pip freeze > requirements.txt
     ```
 2. Create webapp in Azure
 3. Add your existing Azure domain to ```ALLOWED HOSTS``` in ```.\hello\settings.py``` for example ```["djangopal.azurewebsites.net]```
