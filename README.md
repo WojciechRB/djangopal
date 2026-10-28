@@ -18,7 +18,7 @@
     ```
     pip freeze > requirement.txt
     ```
-4. Run app
+5. Run app
     ```sh
     python manage.py runserver
     ```
